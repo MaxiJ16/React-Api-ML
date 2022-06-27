@@ -1,4 +1,5 @@
 {
+  "homepage":"https://maxij16.github.io/React-Api-ML/",
   "name": "css-in-js",
   "version": "1.0.0",
   "main": "index.js",
@@ -6,9 +7,13 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "live-server"
+    "start": "live-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.3.0",
     "typescript": "^4.6.4",
     "webpack": "^5.72.1",
