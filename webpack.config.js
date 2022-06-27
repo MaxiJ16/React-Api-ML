@@ -68,6 +68,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "https://maxij16.github.io/React-Api-ML/"
   },
   // plugins: [
   //   new HtmlWebpackPlugin({
