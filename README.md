@@ -1,3 +1,3 @@
 # React-Api-ML
 
-Link : https://maxij16.github.io/React-Api-ML/
+Link : https://react-api-820ldk1zj-maxij16.vercel.app/
