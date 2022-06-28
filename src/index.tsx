@@ -9,6 +9,8 @@ import { BrowserRouter } from "react-router-dom";
 // Importamos RecoilRoot
 import { RecoilRoot } from "recoil";
 
+import "../index.css";
+
 // Lugar de mi HTML donde se imprime
 const container = document.getElementById("app");
 const root = createRoot(container);
