@@ -66,17 +66,17 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/",
+    // publicPath: "/",
   },
-  devServer: {
-    contentBase: "./",
-  },
+  // devServer: {
+  //   contentBase: "./",
+  // },
   performance: {
     hints: false,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve("./index.html"),
-    }),
-  ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     template: path.resolve("./index.html"),
+  //   }),
+  // ],
 };
