@@ -1,7 +1,7 @@
 const path = require("path");
 
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 //dev es igual a NODE_ENV si es igual a development, esto devuelve un boolean entonces lo usamos en watch
 const dev = process.env.NODE_ENV == "development";
@@ -64,19 +64,19 @@ module.exports = {
     plugins: [new TsconfigPathsPlugin()],
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
     publicPath: "/",
   },
-  // devServer: {
-  //   contentBase: "./",
-  // },
+  devServer: {
+    contentBase: "./",
+  },
   performance: {
     hints: false,
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: path.resolve("./index.html"),
-  //   }),
-  // ],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve("./index.html"),
+    }),
+  ],
 };
