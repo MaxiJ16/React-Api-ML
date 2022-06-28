@@ -61,18 +61,19 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".js", ".ts"],
-    plugins: [
-      new TsconfigPathsPlugin(),
-    ],
+    plugins: [new TsconfigPathsPlugin()],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "https://maxij16.github.io/React-Api-ML/"
+    publicPath: "https://maxij16.github.io/React-Api-ML/",
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: path.resolve("./index.html"),
-  //   }),
-  // ],
+  performance: {
+    hints: false,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve("./index.html"),
+    }),
+  ],
 };
